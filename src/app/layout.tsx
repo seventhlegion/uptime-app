@@ -1,3 +1,4 @@
+import AppLayout from '@/components/layout/AppLayout';
 import { MaterialThemeProvider } from '@/providers/MeterialUIProvider';
 import { ReactQueryProvider } from '@/providers/ReactQueryProvider';
 import type { Metadata } from 'next';
@@ -14,11 +15,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<ReactQueryProvider>
-				<MaterialThemeProvider>
-					<body>{children}</body>
-				</MaterialThemeProvider>
-			</ReactQueryProvider>
+			<body>
+				<ReactQueryProvider>
+					<MaterialThemeProvider>
+						<AppLayout>{children}</AppLayout>
+					</MaterialThemeProvider>
+				</ReactQueryProvider>
+			</body>
 		</html>
 	);
 }

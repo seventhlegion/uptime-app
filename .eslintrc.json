@@ -1,7 +1,3 @@
 {
-	"extends": ["prettier", "next/core-web-vitals"],
-	"plugins": ["prettier"],
-	"rules": {
-		"quotes": ["error", "backtick"]
-	}
+	"extends": "next/core-web-vitals"
 }
